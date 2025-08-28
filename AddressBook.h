@@ -50,9 +50,10 @@ private:
   std::vector<Address> addresses_;     //    vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 
   // Get the index of the record with the specified ID.
+  int getById(int recordId) const;  //проверка-возврат на существование записи в AddressBook
+  // с таким recordId, при неудаче возврат -1   " enum { notFound = -1 } "
   // Returns notFound if not found.
-  int getById(int recordId) const;  //
-  enum { notFound = -1 };       //
+  enum { notFound = -1 };       // Константа в виде перечисления
 };
 
 #endif // AddressBook_dot_h
