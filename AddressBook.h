@@ -13,8 +13,8 @@ public:
   ~AddressBook();
 
   // Exception classes
-  class AddressNotFound { };      // несуществующий идентиф номер
-  class DuplicateId { };          // задублированный идентиф номер
+  class AddressNotFound { };      // несуществующий идентиф номер ______________________
+  class DuplicateId { };          // задублированный идентиф номер______________________
   /*    Исключением называется специальное событие при возникновении которого запускается
   специальная подпрограмма.
         Запуском исключения называется инициализация специальной процедуры, назначенной
@@ -24,13 +24,16 @@ public:
   исключения для взаимодействия с программным кодом обработки исключения
   */
 
-
+// 1
   int insertAddress(const Address& addr, int recordId = 0) //вставка уникального
     throw (DuplicateId);                    // .... //переход если дублированный идентификационный номер ID
+// 2
   void eraseAddress(int recordId) throw (AddressNotFound);  // удалить запись в книге по переданному ID
                                                             //переход если ID не найден 
+// 3
   void replaceAddress(const Address& addr, int recordId = 0) //перезаписать по нов запись в книге
     throw (AddressNotFound);                                //переход если ID не найден        
+// 4
   const Address& getAddress(int recordId) const    //получить-возвратить запись адреса
     throw (AddressNotFound);                        //переход если ID не найден   
 
@@ -40,8 +43,9 @@ public:
 private:
   // Disable copying
   AddressBook(const AddressBook&); //       ----------------- конструктор копий
+  //
   AddressBook& operator=(const AddressBook&); //    --------------- оператор присваивания 
-
+  //
   static int nextId_;
   std::vector<Address> addresses_;     //    vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 
