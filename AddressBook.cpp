@@ -1,6 +1,6 @@
 // TinyPIM (c) 1999 Pablo Halpern. File AddressBook.cpp
 
-#ifndef _MSC_VER
+#ifndef _msc_ver
 #pragma warning(disable : 4786)
 #endif
 
@@ -22,16 +22,14 @@ int AddressBook::insertAddress(const Address& addr,
                                int recordId) throw (DuplicateId)
 {
   if (recordId == 0)
-    // If recordId is not specified(=0), create a new record id.
-    recordId = nextId_++;
-  else 
-		if (recordId >= nextId_)
-			// Make sure nextId is always higher than any known record id.
-			nextId_ = recordId + 1;
-		else 
-			if (getById(recordId) != notFound)//notFound = -1
-				// Explicitly-specified ID is not unique (notFound==-1)
-				throw DuplicateId();
+    // If recordId is not specified, create a new record id.
+    recordId = nextId_++; // присв-ть номер и постинкрементировать nextId_
+  else if (recordId >= nextId_)
+    // Make sure nextId is always higher than any known record id.
+    nextId_ = recordId + 1;
+  else if (getById(recordId) != notFound)
+    // Explicitly-specified ID is not unique
+    throw DuplicateId();
 
   // Append record onto vector.
   addresses_.push_back(addr);
@@ -89,9 +87,9 @@ const Address& AddressBook::getAddress(int recordId) const
   return addresses_[index];
 }
 
-void AddressBook::print() const   //временно для тестирования print()
+void AddressBook::print() const
 {
-  std::cout << "********************* print() *********************\n";
+  std::cout << "******************************************\n";
   for (int i = 0; i < addresses_.size(); ++i)
   {
     const Address& a = addresses_[i];
