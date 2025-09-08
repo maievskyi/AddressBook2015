@@ -29,6 +29,7 @@ int main()
   c.lastname("Neighborhood Video");
   c.phone("555-FILM");
 
+  // в переменных сохр id номера записей AddressBook
   int a_id = book.insertAddress(a);
   int b_id = book.insertAddress(b);
   int c_id = book.insertAddress(c);
@@ -46,7 +47,7 @@ int main()
   // Insert address with duplicate name
   int d_id = book.insertAddress(d);
   std::cout << "*** After adding a duplicate Abigale Adams ***\n";
-  book.print();
+  book.print();  // появляется запись в книгу с новым id
 
   // Erase an address
   book.eraseAddress(a_id);
