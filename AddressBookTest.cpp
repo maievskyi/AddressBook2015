@@ -5,6 +5,7 @@
 #include <iostream>
 #include "AddressBook.h"
 //#include <locale.h> /* Для русского языка ...........................*/
+// add rus comment
 
 
 int main()
