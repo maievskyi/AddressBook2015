@@ -13,7 +13,7 @@ int main()
     SetConsoleCP(1251);     // my +  #include <windows.h>   //my
     SetConsoleOutputCP(1251); // my +  #include <windows.h>   //my
 	//system("chcp 1251");
-	//setlocale(LC_ALL, "Rus"); /* Обязательно должно быть первым........ */
+	setlocale(LC_ALL, "Rus"); /* Обязательно должно быть первым........ */
 
 	std::cout << "*** Русский текст в cout ***\n";
 
