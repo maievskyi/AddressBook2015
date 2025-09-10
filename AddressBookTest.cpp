@@ -4,7 +4,7 @@
 #include <windows.h>//my
 #include <iostream>
 #include "AddressBook.h"
-//#include <locale.h> /* Для русского языка ...........................*/
+#include <locale.h> /* Для русского языка ...........................*/
 // add rus comment
 
 
@@ -14,6 +14,9 @@ int main()
     SetConsoleOutputCP(1251); // my +  #include <windows.h>   //my
 	//system("chcp 1251");
 	//setlocale(LC_ALL, "Rus"); /* Обязательно должно быть первым........ */
+
+	std::cout << "*** Русский текст в cout ***\n";
+
   AddressBook book;     // конструктором класса AddressBook создаётся объект book
  
   Address a;  //созд-е объекта а (=записи=адреса)
