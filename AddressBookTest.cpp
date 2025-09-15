@@ -5,7 +5,7 @@
 #include <iostream>
 #include "AddressBook.h"
 #include <locale.h> /* Для русского языка ...........................*/
-// проверка на кирилицу
+// проверка на кирилицу UTF-8
 
 
 int main()
