@@ -1,5 +1,5 @@
-// TinyPIM (c) 1999 Pablo Halpern. File AddressBook.cpp
-//Ðóññêèé òåêñò - êîììåíò âî âñåõ ô
+ï»¿// TinyPIM (c) 1999 Pablo Halpern. File AddressBook.cpp
+//Ð ÑƒÑÑÐºÐ¸Ð¹ Ñ‚ÐµÐºÑÑ‚ - ÐºÐ¾Ð¼Ð¼ÐµÐ½Ñ‚ Ð²Ð¾ Ð²ÑÐµÑ… Ñ„
 
 #ifndef _msc_ver
 #pragma warning(disable : 4786)
@@ -24,7 +24,7 @@ int AddressBook::insertAddress(const Address& addr,
 {
   if (recordId == 0)
     // If recordId is not specified, create a new record id.
-    recordId = nextId_++; // ïðèñâ-òü íîìåð è ïîñòèíêðåìåíòèðîâàòü nextId_
+    recordId = nextId_++; // Ð¿Ñ€Ð¸ÑÐ²-Ñ‚ÑŒ Ð½Ð¾Ð¼ÐµÑ€ Ð¸ Ð¿Ð¾ÑÑ‚Ð¸Ð½ÐºÑ€ÐµÐ¼ÐµÐ½Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ nextId_
   else if (recordId >= nextId_)
     // Make sure nextId is always higher than any known record id.
     nextId_ = recordId + 1;

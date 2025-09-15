@@ -1,4 +1,5 @@
 ﻿// TinyPIM (c) 1999 Pablo Halpern. File AddressBookTest.cpp
+// Русский текст-коммент во всех ф
 
 //#define _CRT_SECURE_NO_WARNINGS  //my orfogr mistakes ???  my
 #include <windows.h>//my
@@ -6,7 +7,7 @@
 #include "AddressBook.h"
 #include <locale.h> /* Для русского языка ...........................*/
 // проверка на кирилицу UTF-8 UTF-8
-// Русский текст-коммент во всех ф
+
 
 int main()
 {
