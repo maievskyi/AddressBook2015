@@ -1,4 +1,5 @@
 // TinyPIM (c) 1999 Pablo Halpern, File Address.cpp
+//Русский текст - коммент во всех ф
 
 #include "Address.h"
 

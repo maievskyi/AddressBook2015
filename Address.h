@@ -1,4 +1,5 @@
 // TinyPIM (c) 1999 Pablo Halpern. File Address.h
+//Русский текст-коммент во всех ф
 
 #ifndef Address_dot_h
 #define Address_dot_h 1

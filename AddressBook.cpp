@@ -1,4 +1,5 @@
 // TinyPIM (c) 1999 Pablo Halpern. File AddressBook.cpp
+//Русский текст - коммент во всех ф
 
 #ifndef _msc_ver
 #pragma warning(disable : 4786)

@@ -2,6 +2,7 @@
 
 #ifndef AddressBook_dot_h
 #define AddressBook_dot_h
+//Русский текст-коммент во всех ф
 
 #include <vector>
 #include "Address.h"
