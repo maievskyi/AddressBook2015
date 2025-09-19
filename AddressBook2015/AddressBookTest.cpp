@@ -10,7 +10,7 @@
 
 int main()
 {
-
+//комменты в main()
 
 	return(0);
 }
